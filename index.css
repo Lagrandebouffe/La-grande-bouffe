@@ -47,23 +47,23 @@ li a:hover {
   text-decoration: underline;
 }
 
-/*Slider*/
 
-.container-slide {
-  width: 90%;
-  margin: auto;
+.container-slid-seul{
+  margin-top: 40px;
 }
 
 .mySlides {
-  width: 100%;
-  height: 800px;
+
+    width: 94%;
+    height: 400px;
+    margin: auto;
 }
 
 .container-dots {
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 590px;
+  top: 515px;
   left: 50%;
 }
 
@@ -75,6 +75,19 @@ li a:hover {
   background-color: white;
   margin-right: 3px;
 
+}
+
+#h1-description{
+  font-family: 'Yellowtail', cursive;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+#p-description{
+  margin: 25px;
+  margin-left: 50px;
+  margin-bottom: 90px;
+  font-family: 'Niconne', cursive;
+font-size: 30px;
 }
 
 .mappa{
