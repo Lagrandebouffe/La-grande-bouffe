@@ -34,7 +34,7 @@ header ul {
 }
 
 li {
-  padding-right: 25px;
+  /*padding-right: 15px;*/
   padding-top: 10px;
 }
 
@@ -50,13 +50,13 @@ li a:hover {
 /*Slider*/
 
 .container-slide {
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 
 .mySlides {
   width: 100%;
-  height: 800px;
+  height: 700px;
 }
 
 .container-dots {
