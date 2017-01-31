@@ -1,1 +1,77 @@
+.container{
+  font-family: cursive;
+}
 
+header{
+  height: 80px;
+  margin: -7px;
+  background-color: #ff00ff;
+  justify-content: space-around;
+  display: flex;
+  border-radius: 5px;
+}
+
+ul{
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+li{
+  padding-right: 25px;
+}
+
+li a {
+  text-decoration: none;
+}
+
+.logo{
+  width: 150px;
+  height: 70px;
+  background-image: url("boufle.jpg");
+  background-size: cover;
+  margin-top: 5px;
+
+}
+.menu li{
+  margin-top: 10px;
+}
+
+.logo p{
+  color: red;
+  font-size: 25px;
+  padding-left: 10px;
+  margin-top: 1px;
+}
+.mappa{
+  display: flex;
+  justify-content: center;
+}
+
+#map{
+  width: 99%;
+  height:400px;
+  margin-top: 80px;
+  align-self: center;
+}
+
+.menu1{
+  display: flex;
+}
+.menu1 img{
+  height: 100px;
+  width: 140px;
+}
+.content{
+  padding-left: 15px;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  height:80px;
+}
+.footer-text span{
+  margin-left: 80px;
+}
