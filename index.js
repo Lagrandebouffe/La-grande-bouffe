@@ -12,11 +12,11 @@ function slider() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}
     x[myIndex-1].style.display = "block";
-<<<<<<< HEAD
+// HEAD
     setTimeout(slider, 3000); // Change image every 2 seconds
-=======
+//=======
     setTimeout(carousel, 4000); // Change image every 2 seconds
->>>>>>> 85674987f4f80db0a1f113e68ae0051455397f67
+//>>>>>>> 85674987f4f80db0a1f113e68ae0051455397f67
 }
 
 
