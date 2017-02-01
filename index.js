@@ -1,20 +1,4 @@
 
-// slider
-var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 3000); // Change image every 2 seconds
-}
-
 // Recuperer les donnees
 var contenu = {
   name: 'La bonne bouffe',
@@ -52,7 +36,6 @@ var contenu = {
 }
 
 
-
 var imag = document.getElementById('image');
 imag.src = contenu.images[0];
 var imag = document.getElementById('image1');
@@ -63,8 +46,34 @@ var imag = document.getElementById('image3');
 imag.src = contenu.images[3];
 
 
-document.getElementById('h1-description').innerHTML= contenu.name;
-document.getElementById('p-description').innerHTML= contenu.description;
+// Function slider
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+
+
+// h1 main
+var main = document.getElementById('mains');
+var h11 = document.createElement("h1");
+var hh = h11.innerHTML = contenu.name+'<h1 id = h1-description></h1>';
+main.appendChild (h11);
+
+//La description main
+var p1 = document.createElement("p");
+p1.classList.add("description");
+p1.innerHTML = contenu.description+'<p id = p-description></p>';
+main.appendChild (p1);
 
 // Récupérer données pour la carte des menus
 
@@ -103,18 +112,55 @@ creationMenu();
 
 // map js
 
-var myLatlng = new google.maps.LatLng(37.7552464,-122.4185384);
-var myOptions = {
-    zoom: 16,
-    center: myLatlng,
-    scrollwheel: false,
-    mapTypeId: 'satellite', //google.maps.MapTypeId.ROADMAP,
-    styles: []
-  };
-  var map = new google.maps.Map(document.getElementById('map'), myOptions);
-  var marker = new google.maps.Marker({
-    position: myLatlng,
-    map: map,
-    title: "here you are"
-  });
-var affichier = document.getElementById('PANIER');
+function initMap() {
+       // Create a map object and specify the DOM element for display.
+       var map = new google.maps.Map(document.getElementById('map'), {
+         center: {lat: -34.397, lng: 150.644},
+         scrollwheel: false,
+         zoom: 8
+       });
+     };
+
+// partie footer
+
+var foot = document.getElementById('footer-text');
+var newspan = document.createElement('span');
+var contentspan = newspan.innerHTML = contenu.baseline + '<span></span><br>';
+foot.appendChild(newspan);
+
+
+var newspan2 = document.createElement('span');
+contentspan = newspan2.innerHTML = contenu.addresse + '<span></span><br>';
+foot.appendChild(newspan2);
+
+var newspan3 = document.createElement('span');
+contentspan = newspan3.innerHTML = contenu.codePostale + '<span></span><br>';
+foot.appendChild(newspan3);
+
+var newspan4 = document.createElement('span');
+contentspan = newspan4.innerHTML = contenu.ville + '<span></span><br>';
+foot.appendChild(newspan4);
+
+
+
+
+//
+// var foot = document.getElementById('footer-text');
+// var footSpan = document.createElement("span");
+// var ContenueSpan = footSpan.innerHTML = contenu.baseline+'<span></span><br>';
+// foot.appendChild (footSpan);
+//
+// var foot = document.getElementById('footer-text');
+// var footSpan = document.createElement("span");
+// var ContenueSpan = footSpan.innerHTML = contenu.addresse+'<span></span><br>';
+// foot.appendChild (footSpan);
+//
+// var foot = document.getElementById('footer-text');
+// var footSpan = document.createElement("span");
+// var ContenueSpan = footSpan.innerHTML = contenu.codePostale+'<span></span><br>';
+// foot.appendChild (footSpan);
+//
+// var foot = document.getElementById('footer-text');
+// var footSpan = document.createElement("span");
+// var ContenueSpan = footSpan.innerHTML = contenu.ville+'<span></span><br>';
+// foot.appendChild (footSpan);
