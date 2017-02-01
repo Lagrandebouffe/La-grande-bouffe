@@ -1,20 +1,4 @@
 
-// slider
-var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 3000); // Change image every 2 seconds
-}
-
 // Recuperer les donnees
 var contenu = {
   name: 'La bonne bouffe',
@@ -62,8 +46,33 @@ var imag = document.getElementById('image3');
 imag.src = contenu.images[3];
 
 
-document.getElementById('h1-description').innerHTML= contenu.name;
-document.getElementById('p-description').innerHTML= contenu.description;
+// Function slider
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+
+
+// h1 main
+var main = document.getElementById('mains');
+var h11 = document.createElement("h1");
+var hh = h11.innerHTML = contenu.name+'<h1 id = h1-description></h1>';
+main.appendChild (h11);
+
+//La description main
+var p1 = document.createElement("p");
+p1.innerHTML = contenu.description+'<p id = p-description></p>';
+main.appendChild (p1);
 
 
 
@@ -76,9 +85,9 @@ function initMap() {
          scrollwheel: false,
          zoom: 8
        });
-     }
+     };
 
-//partie footer
+// partie footer
 
 var foot = document.getElementById('footer-text');
 var newspan = document.createElement('span');
@@ -97,3 +106,27 @@ foot.appendChild(newspan3);
 var newspan4 = document.createElement('span');
 contentspan = newspan4.innerHTML = contenu.ville + '<span></span><br>';
 foot.appendChild(newspan4);
+
+
+
+
+//
+// var foot = document.getElementById('footer-text');
+// var footSpan = document.createElement("span");
+// var ContenueSpan = footSpan.innerHTML = contenu.baseline+'<span></span><br>';
+// foot.appendChild (footSpan);
+//
+// var foot = document.getElementById('footer-text');
+// var footSpan = document.createElement("span");
+// var ContenueSpan = footSpan.innerHTML = contenu.addresse+'<span></span><br>';
+// foot.appendChild (footSpan);
+//
+// var foot = document.getElementById('footer-text');
+// var footSpan = document.createElement("span");
+// var ContenueSpan = footSpan.innerHTML = contenu.codePostale+'<span></span><br>';
+// foot.appendChild (footSpan);
+//
+// var foot = document.getElementById('footer-text');
+// var footSpan = document.createElement("span");
+// var ContenueSpan = footSpan.innerHTML = contenu.ville+'<span></span><br>';
+// foot.appendChild (footSpan);
