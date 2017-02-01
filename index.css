@@ -48,7 +48,7 @@ li {
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 515px;
+  top: 730px;
   left: 50%;
 }
 
@@ -62,12 +62,16 @@ li {
 
 }
 
-#h1-description{
+/*h1 mains*/
+h1{
   font-family: 'Yellowtail', cursive;
   margin-left: 50px;
   margin-top: 50px;
 }
-#p-description{
+
+/*La description main*/
+
+p{
   margin: 25px;
   margin-left: 50px;
   margin-bottom: 90px;
@@ -104,8 +108,13 @@ font-size: 30px;
   padding-top: 20px;
   height:80px;
 }
-.footer-text span{
+#footer-text span{
   margin-left: 80px;
+  font-family: 'Yellowtail', cursive;
+  font-size: 18px;
+  position: absolute;
+  left: 0px;
+  top: 5px;
 }
 
 
