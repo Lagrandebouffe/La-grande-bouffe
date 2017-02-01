@@ -21,9 +21,9 @@ var contenu = {
   description: 'Venez goûter nos plats préparés avec amours et bienveillance. Notre chef Gertrude viendra probablement vous serrer la main. Vous pourrez échanger avec cette passionnée de cuisine et repartir avec des conseils pour reproduire sa cuisine inimitable',
   images: [
     'https://media-cdn.tripadvisor.com/media/photo-s/02/1b/9a/bf/le-grande-bouffe.jpg',
-    'http://www.epicurien.be/img/recettes-cuisines/20130928_poulet_morilles-500.jpg',
-    'https://i1.wp.com/cotesoleils.fr/wp-content/uploads/2015/06/tajine-agneau-et-pruneaux-algc3a9rie1.jpg',
-    'http://scrat.hellocoton.fr/img/guide/recette-ma-salade-tiede-de-chou-kale-et-lentilles-patates-douces-et-saumon-fume-18911644.jpg'
+    'images/poulet.jpg',
+    'images/tagine.jpeg',
+    'images/salade.jpeg'
   ],
   baseline: 'La promo7 vous régale',
   addresse: '51, rue de Vincennes',
@@ -47,7 +47,7 @@ var contenu = {
       image: 'http://scrat.hellocoton.fr/img/guide/recette-ma-salade-tiede-de-chou-kale-et-lentilles-patates-douces-et-saumon-fume-18911644.jpg',
       description: 'Toujours à l\'heure, la salade de saison vous régalera avec ses légumes',
       price: '14 €'
-    },
+    }
   ]
 }
 
@@ -66,7 +66,40 @@ imag.src = contenu.images[3];
 document.getElementById('h1-description').innerHTML= contenu.name;
 document.getElementById('p-description').innerHTML= contenu.description;
 
+// Récupérer données pour la carte des menus
 
+var contenuMenu = document.getElementById("container-menu");
+var menuCarte = contenu.carte;
+
+function creationMenu () {
+  for (var i = 0; i < menuCarte.length; i++) {
+    var menuElt = document.createElement("div");
+    var borderImage = document.createElement("div");
+    var imageElt = document.createElement("img");
+    var contentElt = document.createElement("div");
+    var nomElt = document.createElement("h3");
+    var descriptionElt = document.createElement("p");
+
+    menuElt.classList.add("menus");
+    borderImage.style.border = "2px black solid";
+    borderImage.style.padding = "10px";
+    borderImage.style.backgroundColor = "rgb(0,0,0)";
+    imageElt.src = menuCarte[i].image;
+    contentElt.classList.add("content");
+    imageElt.classList.add("image-responsive");
+    nomElt.textContent = menuCarte[i].name;
+    descriptionElt.textContent = menuCarte[i].description;
+
+    borderImage.appendChild(imageElt);
+    menuElt.appendChild(borderImage);
+    contentElt.appendChild(nomElt);
+    contentElt.appendChild(descriptionElt);
+    menuElt.appendChild(contentElt);
+    contenuMenu.appendChild(menuElt);
+  }
+}
+
+creationMenu();
 
 // map js
 

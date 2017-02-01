@@ -1,14 +1,10 @@
 body {
   margin: 0 auto;
-}
-
-html, body {
-  height: 100%;
+  background-color: rgb(244,239,225);
 }
 
 .navbar {
   min-height: 70px;
-
 }
 
 .navbar-toggle {
@@ -18,7 +14,7 @@ html, body {
 }
 
 .navbar-default {
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 li {
@@ -32,16 +28,16 @@ li {
   font-family: 'Pacifico', sans-serif;
 }
 
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav>li>a {
   color: white;
   font-family: 'Pacifico', sans-serif;
   font-size: 1.5em;
 }
 
 .mySlides {
-    width: 100vw;
-    height: 100vh;
-    margin: auto;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
 }
 
 .container-dots {
@@ -59,81 +55,73 @@ li {
   border-radius: 100%;
   background-color: white;
   margin-right: 3px;
-
 }
 
-#h1-description{
+#h1-description {
   font-family: 'Yellowtail', cursive;
   margin-left: 50px;
   margin-top: 50px;
 }
-#p-description{
+
+#p-description {
   margin: 25px;
   margin-left: 50px;
   margin-bottom: 90px;
   font-family: 'Niconne', cursive;
-font-size: 30px;
+  font-size: 30px;
 }
 
-.mappa{
+.mappa {
   display: flex;
   justify-content: center;
 }
 
-#map{
+#map {
   width: 99%;
-  height:400px;
+  height: 400px;
   margin-top: 80px;
   align-self: center;
 }
 
-.menu1{
+.menus {
   display: flex;
-}
-.menu1 img{
-  height: 100px;
-  width: 140px;
-}
-.content{
-  padding-left: 15px;
+  justify-content: space-around;
+  margin-top: 40px;
+
 }
 
-.footer{
+.menus img {
+  height: 300px;
+  width: 400px;
+  border: black solid 2px;
+}
+
+h3 {
+  font-family: 'Pacifico', sans-serif;
+  font-size: 1.2em;
+}
+
+.content {
+  width: 50%;
+  padding: 80px;
+  font-family: 'Pacifico', sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  border: black 2px solid;
+  background-color: rgb(255,235,197);
+}
+
+.content p {
+  padding-top: 15px;
+}
+
+.footer {
   display: flex;
   justify-content: space-around;
   padding-top: 20px;
-  height:80px;
+  height: 80px;
 }
-.footer-text span{
+
+.footer-text span {
   margin-left: 80px;
-}
-
-
-@media screen and (max-width: 700px) {
-  .menu {
-    display: none;
-  }
-
-  #nav-deroulant {
-    display: block;
-  }
-
-  header {
-    justify-content: space-between;
-  }
-
-  .logo {
-    font-size: 0.8em;
-    margin-left: 10px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .logo {
-    font-size: 0.5em;
-  }
-
-  #nav-deroulant {
-    margin-top: 5px;
-  }
 }
