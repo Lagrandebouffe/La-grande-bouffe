@@ -6,45 +6,31 @@ html, body {
   height: 100%;
 }
 
-header{
+.navbar {
+  min-height: 70px;
+
+}
+
+.navbar-toggle {
+  background-color: white;
   position: sticky;
   top: 0px;
-  left: 0px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: space-around;
 }
 
-.logo{
-  font-family: 'Pacifico', cursive;
+.navbar-default {
+  background-color: rgba(0,0,0,0.3);
+}
+
+.navbar-default .navbar-brand {
   color: white;
+  font-size: 1.8em;
+  font-family: 'Pacifico', sans-serif;
 }
 
-.menu {
-  width: 40%;
-}
-
-header ul {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  font-family: 'Pacifico', cursive;
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  font-family: 'Pacifico', sans-serif;
   font-size: 1.5em;
-}
-
-li {
-  /*padding-right: 15px;*/
-  padding-top: 10px;
-}
-
-li a {
-  text-decoration: none;
-  color: white;
-}
-
-li a:hover {
-  text-decoration: underline;
 }
 
 /*Slider*/
@@ -108,4 +94,34 @@ li a:hover {
 }
 .footer-text span{
   margin-left: 80px;
+}
+
+
+@media screen and (max-width: 700px) {
+  .menu {
+    display: none;
+  }
+
+  #nav-deroulant {
+    display: block;
+  }
+
+  header {
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 0.8em;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .logo {
+    font-size: 0.5em;
+  }
+
+  #nav-deroulant {
+    margin-top: 5px;
+  }
 }
