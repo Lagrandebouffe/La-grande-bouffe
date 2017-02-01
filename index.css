@@ -98,11 +98,21 @@ font-size: 30px;
   padding-left: 15px;
 }
 
+
 .footer{
   display: flex;
   justify-content: space-around;
   padding-top: 20px;
-  height:80px;
+  margin-left: 5px;
+  width: 99%;
+  height: 110px;
+  background-color: #F5DEB3;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.footer-menu ul{
+  display: flex;
+  list-style-type: none;
 }
 .footer-text span{
   margin-left: 80px;

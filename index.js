@@ -52,7 +52,6 @@ var contenu = {
 }
 
 
-
 var imag = document.getElementById('image');
 imag.src = contenu.images[0];
 var imag = document.getElementById('image1');
@@ -70,18 +69,31 @@ document.getElementById('p-description').innerHTML= contenu.description;
 
 // map js
 
-var myLatlng = new google.maps.LatLng(37.7552464,-122.4185384);
-var myOptions = {
-    zoom: 16,
-    center: myLatlng,
-    scrollwheel: false,
-    mapTypeId: 'satellite', //google.maps.MapTypeId.ROADMAP,
-    styles: []
-  };
-  var map = new google.maps.Map(document.getElementById('map'), myOptions);
-  var marker = new google.maps.Marker({
-    position: myLatlng,
-    map: map,
-    title: "here you are"
-  });
-var affichier = document.getElementById('PANIER');
+function initMap() {
+       // Create a map object and specify the DOM element for display.
+       var map = new google.maps.Map(document.getElementById('map'), {
+         center: {lat: -34.397, lng: 150.644},
+         scrollwheel: false,
+         zoom: 8
+       });
+     }
+
+//partie footer
+
+var foot = document.getElementById('footer-text');
+var newspan = document.createElement('span');
+var contentspan = newspan.innerHTML = contenu.baseline + '<span></span><br>';
+foot.appendChild(newspan);
+
+
+var newspan2 = document.createElement('span');
+contentspan = newspan2.innerHTML = contenu.addresse + '<span></span><br>';
+foot.appendChild(newspan2);
+
+var newspan3 = document.createElement('span');
+contentspan = newspan3.innerHTML = contenu.codePostale + '<span></span><br>';
+foot.appendChild(newspan3);
+
+var newspan4 = document.createElement('span');
+contentspan = newspan4.innerHTML = contenu.ville + '<span></span><br>';
+foot.appendChild(newspan4);
