@@ -17,14 +17,13 @@ html, body {
   top: 0px;
 }
 
-<<<<<<< HEAD
 .navbar-default {
   background-color: rgba(0,0,0,0.3);
-=======
+}
+
 li {
   padding-right: 25px;
   padding-top: 10px;
->>>>>>> 1e9ae39a5df36575850348f73ba587c5eb0acb53
 }
 
 .navbar-default .navbar-brand {
@@ -39,15 +38,9 @@ li {
   font-size: 1.5em;
 }
 
-
-.container-slid-seul{
-  margin-top: 40px;
-}
-
 .mySlides {
-
-    width: 94%;
-    height: 400px;
+    width: 100vw;
+    height: 100vh;
     margin: auto;
 }
 
