@@ -1,11 +1,11 @@
-var imag = document.getElementById('image');
-imag.src = contenu.images[0];
+// var imag = document.getElementById('image');
+// imag.src = contenu.images[0];
 var imag = document.getElementById('image1');
-imag.src = contenu.images[1];
+imag.src = contenu.images[0];
 var imag = document.getElementById('image2');
-imag.src = contenu.images[2];
+imag.src = contenu.images[1];
 var imag = document.getElementById('image3');
-imag.src = contenu.images[3];
+imag.src = contenu.images[2];
 
 
 // Function slider
@@ -13,9 +13,8 @@ var myIndex = 0;
 carousel();
 
 function carousel() {
-    var i;
     var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
+    for (var i = 0; i < x.length; i++) {
        x[i].style.display = "none";
     }
     myIndex++;
@@ -44,44 +43,40 @@ var menuCarte = contenu.carte;
 
 function creationMenu () {
   for (var i = 0; i < menuCarte.length; i++) {
+
     var menuElt = document.createElement("div");
-    var borderImage = document.createElement("div");
+    // var borderImage = document.createElement("div");
     var imageElt = document.createElement("img");
     var contentElt = document.createElement("div");
     var nomElt = document.createElement("h3");
     var descriptionElt = document.createElement("p");
+    var btn = document.createElement("button");
 
-    menuElt.classList.add("menus");
-    borderImage.style.border = "2px black solid";
-    borderImage.style.padding = "10px";
-    borderImage.style.backgroundColor = "rgb(0,0,0)";
+    menuElt.classList.add("menus", "row");
+    // borderImage.classList.add("col-xs-12", "col-sm-3")
+    // borderImage.style.border = "2px black solid";
+    // borderImage.style.padding = "10px";
+    // borderImage.style.backgroundColor = "rgb(0,0,0)";
     imageElt.src = menuCarte[i].image;
-    contentElt.classList.add("content");
-    imageElt.classList.add("image-responsive");
+    imageElt.classList.add("menuImage", "image-responsive", "col-xs-12", "col-sm-offset-1", "col-sm-4");
+    contentElt.classList.add("content", "col-xs-12", "col-sm-offset-1", "col-sm-5", "col-1-offset-1");
     nomElt.textContent = menuCarte[i].name;
     descriptionElt.textContent = menuCarte[i].description;
+    btn.textContent = "Mange moi";
 
-    borderImage.appendChild(imageElt);
-    menuElt.appendChild(borderImage);
+    // borderImage.appendChild(imageElt);
+    menuElt.appendChild(imageElt);
+    // menuElt.appendChild(imageElt);
+
     contentElt.appendChild(nomElt);
     contentElt.appendChild(descriptionElt);
+    contentElt.appendChild(btn);
     menuElt.appendChild(contentElt);
     contenuMenu.appendChild(menuElt);
   }
 }
 
 creationMenu();
-
-// map js
-
-function initMap() {
-       // Create a map object and specify the DOM element for display.
-       var map = new google.maps.Map(document.getElementById('map'), {
-         center: {lat: -34.397, lng: 150.644},
-         scrollwheel: false,
-         zoom: 8
-       });
-     };
 
 // partie footer
 
