@@ -15,24 +15,35 @@ carousel();
 function carousel() {
     var x = document.getElementsByClassName("mySlides");
     for (var i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
+        x[i].style.display = "none";
     }
     myIndex++;
+<<<<<<< HEAD
     if (myIndex > x.length) {myIndex = 1}
     x[myIndex-1].style.display = "block";
     setTimeout(carousel, 3000); // Change image every 3 seconds
+=======
+    if (myIndex > x.length) {
+        myIndex = 1
+    }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 3000); // Change image every 2 seconds
+>>>>>>> 825ce8352c99f1e52a61ad2851bd11b6dac90b99
 }
 
 
-// h1 main
 var main = document.getElementById('mains');
+<<<<<<< HEAD
 var h11 = document.createElement("h1");
 var hh = h11.innerHTML = contenu.name + '<h1 id = h1-description></h1>';
 main.appendChild (h11);
+=======
+>>>>>>> 825ce8352c99f1e52a61ad2851bd11b6dac90b99
 
 //La description main
 var p1 = document.createElement("p");
 p1.classList.add("description");
+<<<<<<< HEAD
 p1.innerHTML = contenu.description+'<p id = p-description></p>';
 main.appendChild (p1);
 
@@ -77,6 +88,10 @@ function creationMenu () {
 }
 
 creationMenu();
+=======
+p1.innerHTML = contenu.description + '<p id = p-description></p>';
+main.appendChild(p1);
+>>>>>>> 825ce8352c99f1e52a61ad2851bd11b6dac90b99
 
 // partie footer
 
@@ -97,6 +112,7 @@ foot.appendChild(newspan3);
 var newspan4 = document.createElement('span');
 contentspan = newspan4.innerHTML = contenu.ville + '<span></span><br>';
 foot.appendChild(newspan4);
+<<<<<<< HEAD
 
 function myFunction(){
   document.getElementById("ACCUEIL").innerHTML = "this is me what do u wanna do";
@@ -122,3 +138,5 @@ function myFunction(){
 // var footSpan = document.createElement("span");
 // var ContenueSpan = footSpan.innerHTML = contenu.ville+'<span></span><br>';
 // foot.appendChild (footSpan);
+=======
+>>>>>>> 825ce8352c99f1e52a61ad2851bd11b6dac90b99

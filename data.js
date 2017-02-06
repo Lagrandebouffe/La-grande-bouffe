@@ -1,5 +1,5 @@
 var contenu = {
-  name: 'La bonne bouffe',
+  name: 'La grande bouffe',
   description: 'Venez goûter nos plats préparés avec amours et bienveillance. Notre chef Gertrude viendra probablement vous serrer la main. Vous pourrez échanger avec cette passionnée de cuisine et repartir avec des conseils pour reproduire sa cuisine inimitable',
   images: [
     'images/poulet.jpg',
