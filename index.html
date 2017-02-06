@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="index.css">
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Permanent+Marker" rel="stylesheet">
   <script src="https://use.fontawesome.com/312a763a88.js"></script>
   <title>La Grande Bouffe</title>
   <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
@@ -17,97 +18,137 @@
 <body>
 
   <header>
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-        <a class="navbar-brand" href="#">La Grande Bouffe</a>
-      </div>
+          <a class="navbar-brand" href="#">
+            <img class="logo" src="images/logo.jpg" alt="">
+          </a>
+        </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">accueil</a></li>
-          <li><a href="#">carte</a></li>
-          <li><a href="#">contact</a></li>
-          <li><a href="#">panier</a></li>
-        </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">accueil</a></li>
+            <li><a href="#mains">présentation</a></li>
+            <li><a href="#carte">carte</a></li>
+            <li><a href="#container-location">contact</a></li>
+            <li>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Panier
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <div class="container container-panier">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-10 col-md-offset-1">
+                        <table class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th>Plat</th>
+                              <th>Quantité</th>
+                              <th class="text-center">Prix Unitaire</th>
+                              <th class="text-center">Total</th>
+                              <th> </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr id="total-panier">
+                              <td>   </td>
+                              <td>   </td>
+                              <td>   </td>
+                              <td>
+                                <h3>Total</h3></td>
+                              <td class="text-right">
+                                <h3></h3>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>   </td>
+                              <td>   </td>
+                              <td>   </td>
+                              <td>
+                                <button type="button" class="btn btn-default">
+                                  <span class="glyphicon glyphicon-inbox"></span> Envie d'un autre menu :)
+                                </button></td>
+                              <td>
+                                <button type="button" class="btn btn-success">
+                                  Payer et manger <span class="glyphicon glyphicon-cutlery"></span>
+                                </button></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
       </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-  </nav>
-</header>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+
 
   <div class="container-slide">
+    <h1 id="titre-principal">La Grande Bouffe</h1>
     <div class="container-slid-seul">
-    <!-- <img id = "image" class="mySlides" src=""> -->
-    <img id = "image1" class="mySlides" src="">
-    <img id = "image2" class="mySlides" src="">
-    <img id = "image3" class="mySlides" src="">
-  </div>
-
-    <!-- <div class="container-dots">
-      <div class="dots" onclick="showDivs()"></div>
-      <div class="dots" onclick="showDivs()"></div>
-      <div class="dots" onclick="showDivs()"></div>
-      <div class="dots" onclick="showDivs()"></div>
-    </div> -->
-
+      <!-- <img id = "image" class="mySlides" src=""> -->
+      <img id="image1" class="mySlides" src="">
+      <img id="image2" class="mySlides" src="">
+      <img id="image3" class="mySlides" src="">
+    </div>
+    <div class="end-road-title"></div>
   </div>
 
   <!-- mains est transferé par js  -->
-<div id="mains"></div>
-
-
-  <hr>
-
-  <div id="container-menu" class="container-fluid">
-  </div>
-
-    <hr>
-
-    <h2>Où nous trouver</h2>
-
-    <div class="container-location">
-
-      <img src="https://media-cdn.tripadvisor.com/media/photo-s/02/1b/9a/bf/le-grande-bouffe.jpg" alt="">
-
-      <div id="map"></div>
+  <div class="container container-mains">
+    <div id="mains">
 
     </div>
+  </div>
 
-    <footer class="footer">
-      <div id="footer-text">
+  <h2 id="carte">La Carte</h2>
+  <div class="container">
+    <div id="container-menu"></div>
+  </div>
 
+  <h2 id="contact">Où nous trouver</h2>
 
+  <div id="container-location">
 
-      </div>
-      <div class="footer-menu">
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/02/1b/9a/bf/le-grande-bouffe.jpg" alt="">
 
-        <ul>
-          <li id="ACCUEIL"><a href="#">ACCUEIL</a></li>
-          <li id="CART"><a href="#">CARTE</a></li>
-          <li id="CONTACT"><a href="#">CONTACT</a></li>
-        </ul>
-      </div>
+    <div id="map"></div>
 
-    </footer>
+  </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCP84SyCAABKR-o5CR7ncmyqeFQMKLbwZQ&callback=initMap"
-       async defer></script>
-      <script type="text/javascript" src="data.js"></script>
-      <script type="text/javascript" src="map.js"></script>
-    <script type="text/javascript" src="index.js"></script>
+  <footer class="footer">
+    <div id="footer-text">
+    </div>
+
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCP84SyCAABKR-o5CR7ncmyqeFQMKLbwZQ&callback=initMap" async defer></script>
+  <script type="text/javascript" src="data.js"></script>
+  <script type="text/javascript" src="map.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="main_functions.js"></script>
 </body>
 
 </html>
