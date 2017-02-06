@@ -34,6 +34,17 @@ li {
   font-size: 1.5em;
 }
 
+/*.panier {
+  position: fixed;
+  top: 69px;
+  right: 1px;
+  height: 100px;
+  width: 300px;
+  background-color: red;
+  z-index: 500;
+}*/
+
+
 .mySlides {
   width: 100%;
   height: 100vh;
@@ -83,6 +94,7 @@ h1 {
 
 .menus {
   margin-top: 40px;
+
 }
 
 /*.menus img {
@@ -102,8 +114,8 @@ h3 {
 
 .content {
   /*width: 50%;*/
-  height: 400px;
-  padding: 60px;
+  height: 200px;
+  margin-top: 90px;
   font-family: 'Pacifico', sans-serif;
   font-size: 1.2em;
   text-align: center;

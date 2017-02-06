@@ -17,42 +17,48 @@
 <body>
 
   <header>
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-        <a class="navbar-brand" href="#">La Grande Bouffe</a>
-      </div>
+          <a class="navbar-brand" href="#">La Grande Bouffe</a>
+        </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">accueil</a></li>
-          <li><a href="#">carte</a></li>
-          <li><a href="#">contact</a></li>
-          <li><a href="#">panier</a></li>
-        </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">accueil</a></li>
+            <li><a href="#">carte</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">panier</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
       </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-  </nav>
-</header>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+
+  <div class="panier">
+
+  </div>
+
+
 
   <div class="container-slide">
     <div class="container-slid-seul">
-    <!-- <img id = "image" class="mySlides" src=""> -->
-    <img id = "image1" class="mySlides" src="">
-    <img id = "image2" class="mySlides" src="">
-    <img id = "image3" class="mySlides" src="">
-  </div>
+      <img id = "image" class="mySlides" src="">
+      <img id="image1" class="mySlides" src="">
+      <img id="image2" class="mySlides" src="">
+      <img id="image3" class="mySlides" src="">
+    </div>
 
     <!-- <div class="container-dots">
       <div class="dots" onclick="showDivs()"></div>
@@ -64,7 +70,7 @@
   </div>
 
   <!-- mains est transferé par js  -->
-<div id="mains"></div>
+  <div id="mains"></div>
 
 
   <hr>
@@ -72,42 +78,40 @@
   <div id="container-menu" class="container-fluid">
   </div>
 
-    <hr>
+  <hr>
 
-    <h2>Où nous trouver</h2>
+  <h2>Où nous trouver</h2>
 
-    <div class="container-location">
+  <div class="container-location">
 
-      <img src="https://media-cdn.tripadvisor.com/media/photo-s/02/1b/9a/bf/le-grande-bouffe.jpg" alt="">
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/02/1b/9a/bf/le-grande-bouffe.jpg" alt="">
 
-      <div id="map"></div>
+    <div id="map"></div>
+
+  </div>
+
+  <footer class="footer">
+    <div id="footer-text">
+
+
 
     </div>
+    <div class="footer-menu">
 
-    <footer class="footer">
-      <div id="footer-text">
+      <ul>
+        <li onclick="myFunction()" id="ACCUEIL"><a href="#">ACCUEIL</a></li>
+        <li id="CART"><a href="#">CARTE</a></li>
+        <li id="CONTACT"><a href="#">CONTACT</a></li>
+      </ul>
 
+  </footer>
 
-
-      </div>
-      <div class="footer-menu">
-
-        <ul>
-          <li id="ACCUEIL"><a href="#">ACCUEIL</a></li>
-          <li id="CART"><a href="#">CARTE</a></li>
-          <li id="CONTACT"><a href="#">CONTACT</a></li>
-        </ul>
-      </div>
-
-    </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCP84SyCAABKR-o5CR7ncmyqeFQMKLbwZQ&callback=initMap"
-       async defer></script>
-      <script type="text/javascript" src="data.js"></script>
-      <script type="text/javascript" src="map.js"></script>
-    <script type="text/javascript" src="index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCP84SyCAABKR-o5CR7ncmyqeFQMKLbwZQ&callback=initMap" async defer></script>
+  <script type="text/javascript" src="data.js"></script>
+  <script type="text/javascript" src="map.js"></script>
+  <script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>

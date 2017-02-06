@@ -20,14 +20,14 @@ function carousel() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}
     x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 3000); // Change image every 2 seconds
+    setTimeout(carousel, 3000); // Change image every 3 seconds
 }
 
 
 // h1 main
 var main = document.getElementById('mains');
 var h11 = document.createElement("h1");
-var hh = h11.innerHTML = contenu.name+'<h1 id = h1-description></h1>';
+var hh = h11.innerHTML = contenu.name + '<h1 id = h1-description></h1>';
 main.appendChild (h11);
 
 //La description main
@@ -60,7 +60,7 @@ function creationMenu () {
     imageElt.src = menuCarte[i].image;
     imageElt.classList.add("menuImage", "image-responsive", "col-xs-12", "col-sm-offset-1", "col-sm-4");
     contentElt.classList.add("content", "col-xs-12", "col-sm-offset-1", "col-sm-5", "col-1-offset-1");
-    nomElt.textContent = menuCarte[i].name;
+    nomElt.textContent = menuCarte[i].name; // N.textContent = innerHTML
     descriptionElt.textContent = menuCarte[i].description;
     btn.textContent = "Mange moi";
 
@@ -98,8 +98,9 @@ var newspan4 = document.createElement('span');
 contentspan = newspan4.innerHTML = contenu.ville + '<span></span><br>';
 foot.appendChild(newspan4);
 
-
-
+function myFunction(){
+  document.getElementById("ACCUEIL").innerHTML = "this is me what do u wanna do";
+}
 
 //
 // var foot = document.getElementById('footer-text');
