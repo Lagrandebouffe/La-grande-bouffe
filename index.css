@@ -63,18 +63,6 @@ li {
   font-size: 1.5em;
 }
 
-<<<<<<< HEAD
-/*.panier {
-  position: fixed;
-  top: 69px;
-  right: 1px;
-  height: 100px;
-  width: 300px;
-  background-color: red;
-  z-index: 500;
-}*/
-
-=======
 .container-slide {
   position: relative;
   margin-top: -160px;
@@ -92,7 +80,6 @@ li {
   background-color: rgba(255, 255, 255, 0.7);
   border: solid black 2px;
 }
->>>>>>> 825ce8352c99f1e52a61ad2851bd11b6dac90b99
 
 .mySlides {
   width: 100%;
@@ -150,7 +137,6 @@ li {
 
 .menus {
   margin-top: 40px;
-
 }
 
 .menuImage {
@@ -165,18 +151,10 @@ h3 {
 }
 
 .content {
-<<<<<<< HEAD
-  /*width: 50%;*/
-  height: 200px;
-  margin-top: 90px;
-  font-family: 'Pacifico', sans-serif;
-  font-size: 1.2em;
-=======
   height: 400px;
   padding-top: 10px;
   font-family: 'Permanent Marker', sans-serif;
   font-size: 1.4em;
->>>>>>> 825ce8352c99f1e52a61ad2851bd11b6dac90b99
   text-align: center;
   border: black 5px double;
   color: white;
